@@ -70,11 +70,12 @@ class ListaTarefasState extends State<ListaTarefas> {
               onTap: () async {
                 TimeOfDay? pickedTime = await showTimePicker(
                   context: context,
-                  initialTime: TimeOfDay.now()
+                  initialTime: TimeOfDay.now(),
                 );
-                if (pickedTime!=null) {
+                if (pickedTime != null) {
                   setState(() {
-                    horaControl.text = "${pickedTime.hour}:${pickedTime.minute}";
+                    // Formate a hora e os minutos com dois dígitos usando padLeft
+                    horaControl.text = "${pickedTime.hour.toString().padLeft(2, '0')}:${pickedTime.minute.toString().padLeft(2, '0')}";
                   });
                 }
               },

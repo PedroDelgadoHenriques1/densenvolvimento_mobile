@@ -15,7 +15,7 @@ class HomeState extends State<Home> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 3),
+      const Duration(seconds: 1),
       () {
         Navigator.pop(context);
         Navigator.push(
@@ -40,9 +40,9 @@ class HomeState extends State<Home> {
           color: Colors.black87,
           gradient: LinearGradient(
             colors: [
-              Colors.deepPurple,
-              Colors.blueAccent,
-              Colors.cyanAccent
+              Colors.deepOrange,
+              Colors.redAccent,
+              Color.fromARGB(255, 1, 160, 38)
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight
@@ -65,7 +65,7 @@ class HomeState extends State<Home> {
         /*child: Image.asset(
           "./assets/images/computer.png"
         )*/
-        child: Lottie.asset("./assets/images/animacao.json")
+        child: Lottie.asset("./assets/images/animacao2.json")
       )
     );
   }
